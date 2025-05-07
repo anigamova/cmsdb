@@ -1,46 +1,22 @@
 # coding: utf-8
 
 """
-CMS datasets from the 2023 post_BPix data-taking campaign
+CMS datasets from the 2022 post-EE data-taking campaign
 """
 
 import cmsdb.processes as procs
-from cmsdb.campaigns.run3_2023_postBPix_nano_tau_skim_v2 import campaign_run3_2023_postBPix_nano_tau_skim_v2 as cpn
-
-# cpn.add_dataset(
-#     name='glugluhto2tau_uncorrelateddecay_unfiltered',
-#     id=11100,
-#     is_data=True,
-#     processes=[procs.data_glugluhto2tau],
-#     keys=['/GluGluHTo2Tau_UncorrelatedDecay_UnFiltered'],
-#     n_files=1,
-#     n_events=310379,
-# )
+from cmsdb.campaigns.run3_2022_preEE_nano_tau_skim_v2 import campaign_run3_2022_preEE_nano_tau_skim_v2 as cpn
 
 cpn.add_dataset(
-    name="h_tt_100",
-    id=100,
-    processes=[procs.h_ggf_htt],
-    keys=['/GluGluHto2Tau_M_100_2HDM_II'],
+    name='glugluhto2tau_uncorrelateddecay_unfiltered',
+    id=11100,
+    is_data=True,
+    processes=[procs.data_glugluhto2tau],
+    keys=['/GluGluHTo2Tau_UncorrelatedDecay_UnFiltered'],
     n_files=1,
-    n_events=659932.0,
+    n_events=310379,
 )
-cpn.add_dataset(
-    name="h_tt_125",
-    id=125,
-    processes=[procs.h_ggf_htt],
-    keys=['/GluGluHto2Tau_M_125_2HDM_II'],
-    n_files=1,
-    n_events=650928.0,
-)
-cpn.add_dataset(
-    name="h_tt_1200",
-    id=1200,
-    processes=[procs.h_ggf_htt],
-    keys=['/GluGluHto2Tau_M_1200_2HDM_II'],
-    n_files=2,
-    n_events=632994.0,
-)
+
 
 # cpn.add_dataset(
 #     name="signal",
